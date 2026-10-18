@@ -11,21 +11,21 @@ const SHOP = {
 
 /* ========= الأقسام ========= */
 const CATS = [
-  {id:"all",   name:"الكل"},
-  {id:"pens",  name:"الأقلام"},
-  {id:"inks",  name:"الأحبار"},
-  {id:"paper", name:"الأوراق"},
-  {id:"tools", name:"أدوات أخرى"},
-  {id:"gifts", name:"هدايا خطية"}
+  {id:"all",     name:"الكل"},
+  {id:"pens",    name:"الأقلام"},
+  {id:"inks",    name:"الأحبار"},
+  {id:"inkwells",name:"المحابر"},
+  {id:"paper",   name:"الأوراق"},
+  {id:"books",   name:"كراسات تعلم الخط"}
 ];
 
 /* ========= المنتجات (بيانات تجريبية — استبدلها بالحقيقية) =========
    img: ضع رابط/مسار الصورة، أو اتركه "" لتظهر أيقونة القسم */
 const PRODUCTS = [
-  {id:13, cat:"pens", name:"أقلام بليماكس (Plumax) للخط العربي", desc:"جاهزة للكتابة، مقصوصة باحترافية للمبتدئين والمحترفين", price:850, unit:"للقلم الواحد",
+  {id:1, cat:"pens", name:"أقلام بليماكس (Plumax) للخط العربي", desc:"جاهزة للكتابة، مقصوصة باحترافية للمبتدئين والمحترفين", price:850, unit:"للقلم الواحد",
    sizes:["1 ملم","1.5 ملم","2 ملم","3 ملم"],
-   img:"images/plumax-1.jpg",
-   images:["images/plumax-1.jpg","images/plumax-2.jpg","images/plumax-3.jpg","images/plumax-4.jpg"],
+   img:"images/pens/plumax/1.jpg",
+   images:["images/pens/plumax/1.jpg","images/pens/plumax/2.jpg","images/pens/plumax/3.jpg","images/pens/plumax/4.jpg"],
    details:`أقلام بليماكس «  plumax «  خاصة بالخط العربي، جاهزة للكتابة للمبتدئين والمحترفين والهواة أيضا مقصوصة بطريقة احترافية وبعناية فائقة👌
 من طرف أستاذٍ مختص في قصِّ وبري الأقلام✍️
 تمتاز بمعدنها الرائع غير قابل للصدأ وذات ميكانيزم ممتاز لحمل الحبر
@@ -37,18 +37,41 @@ const PRODUCTS = [
 كنوز للفنون ، كنوز للفنون
 _تواصلكم معنا مفتاح تقدمنا،
 خدمتكم وسام فَخر لنا.🌸`},
-  {id:1,  cat:"pens",  name:"قلم قصب طبيعي — مقاس صغير", desc:"للكتابة الدقيقة والتمارين الأولى", price:150, img:""},
-  {id:2,  cat:"pens",  name:"قلم قصب طبيعي — مقاس وسط", desc:"مناسب لخط النسخ والثلث", price:180, img:""},
-  {id:3,  cat:"pens",  name:"قلم قصب طبيعي — مقاس كبير", desc:"للخطوط الكبيرة واللوحات", price:220, img:""},
-  {id:4,  cat:"pens",  name:"طقم أقلام للمبتدئين", desc:"مجموعة أقلام بمقاسات مختلفة", price:700, img:""},
-  {id:5,  cat:"inks",  name:"حبر أسود للخط", desc:"قارورة 100 مل", price:400, img:""},
-  {id:6,  cat:"inks",  name:"حبر ذهبي", desc:"قارورة 100 مل", price:900, img:""},
-  {id:7,  cat:"inks",  name:"حبر بني تقليدي", desc:"قارورة 100 مل", price:450, img:""},
-  {id:8,  cat:"paper", name:"ورق مصقول للخط", desc:"رزمة 20 ورقة", price:500, img:""},
-  {id:9,  cat:"paper", name:"دفتر تمارين الخط", desc:"دفتر بخطوط إرشادية", price:350, img:""},
-  {id:10, cat:"tools", name:"مبراة للأقلام", desc:"لبري القصب بزاوية صحيحة", price:600, img:""},
-  {id:11, cat:"tools", name:"دواة زجاجية", desc:"لحفظ الحبر أثناء الكتابة", price:300, img:""},
-  {id:12, cat:"gifts", name:"لوحة خطية مهداة", desc:"اسم أو عبارة بخط يدوي", price:2500, img:""}
+  {id:2, cat:"inks", name:"حبر «بديل الزرنيخ» الأصفر", desc:"لون أصفر زاهٍ ولافت لأعمال الخطّاطين والزخرفيّين", price:1500,
+   img:"images/inks/zarnikh-yellow/1.jpg",
+   images:["images/inks/zarnikh-yellow/1.jpg","images/inks/zarnikh-yellow/2.jpg","images/inks/zarnikh-yellow/3.jpg","images/inks/zarnikh-yellow/4.jpg"],
+   details:`🟡 لونٌ يكتب خارج المألوف!
+
+حبر «بديل الزرنيخ» الأصفر💛
+لونٌ أصفر رائع، زاهٍ ولافت، يمنح أعمال الخطّاطين والزخرفيّين حضورًا مختلفًا ولمسةً استثنائيّة.
+
+حبر مميز لعشاق التّجديد، ولمن يريد أن يضيف إلى لوحاته وحروفه لونًا يلفت النظر ويمنح العمل روحًا خاصة. ✒️🎨
+
+💰 السعر: 1500 دج
+
+🚛 متوفر توصيل لكل الولايات
+
+📱 متواجدون على الفايسبوك والأنستغرام باسم:
+كنوز للفنون | @kounouzarts
+
+تواصلكم معنا مفتاح تقدّمنا،
+وخدمتكم وسام فخر لنا. 🌸`},
+  {id:3, cat:"books", name:"كراستا خطّ الرقعة والخطّ الديواني", desc:"134 صفحة بالاتصالات والشروحات الوافية — دار الإسراء المصرية", price:2500,
+   img:"images/books/ruqah-diwani/1.jpg",
+   images:["images/books/ruqah-diwani/1.jpg","images/books/ruqah-diwani/2.jpg","images/books/ruqah-diwani/3.jpg","images/books/ruqah-diwani/4.jpg","images/books/ruqah-diwani/5.jpg","images/books/ruqah-diwani/6.jpg","images/books/ruqah-diwani/7.jpg","images/books/ruqah-diwani/8.jpg","images/books/ruqah-diwani/9.jpg"],
+   details:`كراستيّ خطّ الرقعة والخطّ الدّيواني للأستاذ مختار عالم مفيض الرحمن شقدار خطّاط كسوة الكعبة المشرّفة، حفظه اللّٰه ورعاه🤎
+
+كراسة تحتوي على 134 صفحة بكامل الاتصالات والشروحات الوافية لتعلم الخطّ (الرقعة، الديواني).
+النشر: دار الإسراء المصرية
+
+السعر:2500 دج
+التوصيل متوفرّ دكلّ الولايات.🤎
+——
+متواجدون على الفايسبوک والأنستغرام باسم:
+كنوز للفنون ، كنوز للفنون
+
+_تواصلكم معنا مفتاح تقدمنا،
+خدمتكم وسام فَخر لنا.🌸`}
 ];
 
 /* ========= الولايات ========= */
@@ -59,6 +82,8 @@ const ICONS = {
   pens:'<svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg>',
   inks:'<svg viewBox="0 0 24 24"><path d="M9 3h6v3H9z"/><path d="M8 6h8l2 4v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V10z"/><path d="M12 12c1.5 2 2.5 3 2.5 4.2a2.5 2.5 0 0 1-5 0C9.5 15 10.5 14 12 12z"/></svg>',
   paper:'<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>',
+  inkwells:'<svg viewBox="0 0 24 24"><path d="M8 10h8l2 4v5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-5z"/><path d="M10 10V8h4v2"/><path d="M15 8c2-1 3.5-3 4.5-6-3 1-5.2 2.2-6.5 5"/></svg>',
+  books:'<svg viewBox="0 0 24 24"><path d="M4 4h12a2 2 0 0 1 2 2v14H6a2 2 0 0 1-2-2z"/><path d="M4 18a2 2 0 0 1 2-2h12"/><path d="M8 8h6"/></svg>',
   tools:'<svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>',
   gifts:'<svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4"/><path d="M12 8v13M19 12v9H5v-9"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>'
 };
@@ -97,7 +122,7 @@ function renderGrid(){
         <p>${esc(p.desc)}</p>
         <div class="row"><span class="price">${fmt(p.price)}</span>${p.sizes ? `<button class="add" data-open="${p.id}">اختر الحجم</button>` : `<button class="add" data-add="${p.id}">أضف</button>`}</div>
       </div>
-    </article>`).join("") : `<div class="empty">لا توجد منتجات مطابقة.</div>`;
+    </article>`).join("") : `<div class="empty">${query ? "لا توجد منتجات مطابقة." : "سيتم إضافة منتجات هذا القسم قريباً."}</div>`;
 }
 
 /* ========= السلة ========= */
