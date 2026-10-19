@@ -114,7 +114,7 @@ footer .brandf{font-family:'Aref Ruqaa',serif;color:var(--gold);font-size:1.5rem
 .field{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--text);padding:10px 12px;font-family:inherit;font-size:.95rem}
 .f2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .note{font-size:.78rem;color:var(--muted)}
-.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,30px);background:var(--ok);color:#04150d;padding:10px 20px;border-radius:999px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:90}
+.toast{position:fixed;top:calc(var(--hh) + 12px);left:50%;transform:translate(-50%,-16px);background:var(--ok);color:#04150d;padding:10px 20px;border-radius:999px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:90}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
 /* ===== contact ===== */
@@ -203,3 +203,14 @@ footer .brandf{margin:0}
 .credit{margin:0;padding-top:16px;border-top:1px solid var(--line);width:min(260px,70%);color:var(--muted);font-size:.9rem}
 /* portrait photos in the product modal are shown whole */
 .gmain img{object-fit:contain}
+
+/* RTL fixes */
+.gcount{direction:ltr;unicode-bidi:isolate}
+.gnav,.way em{direction:ltr}
+.pd .kicker{align-self:flex-start}
+
+/* product options */
+.opt{margin-bottom:6px}
+.opt>b{display:block;margin-bottom:8px}
+.chip small{opacity:.8;font-size:.78em}
+.item .t em.od{display:block;font-style:normal;color:var(--muted);font-size:.82rem;line-height:1.5;margin:2px 0}

@@ -27,7 +27,8 @@ const CATS = [
    img: ضع رابط/مسار الصورة، أو اتركه "" لتظهر أيقونة القسم */
 const PRODUCTS = [
   {id:1, cat:"pens", name:"أقلام بليماكس (Plumax) للخط العربي", desc:"جاهزة للكتابة، مقصوصة باحترافية للمبتدئين والمحترفين", price:850, unit:"للقلم الواحد",
-   sizes:["1 ملم","1.5 ملم","2 ملم","3 ملم"],
+   pick:"اختر الحجم",
+   options:[{key:"size", label:"الحجم", values:[{name:"1 ملم"},{name:"1.5 ملم"},{name:"2 ملم"},{name:"3 ملم"}]}],
    img:"images/pens/plumax/1.jpg",
    images:["images/pens/plumax/1.jpg","images/pens/plumax/2.jpg","images/pens/plumax/3.jpg","images/pens/plumax/4.jpg"],
    details:`أقلام بليماكس «  plumax «  خاصة بالخط العربي، جاهزة للكتابة للمبتدئين والمحترفين والهواة أيضا مقصوصة بطريقة احترافية وبعناية فائقة👌
@@ -56,7 +57,7 @@ _تواصلكم معنا مفتاح تقدمنا،
 🚛 متوفر توصيل لكل الولايات
 
 📱 متواجدون على الفايسبوك والأنستغرام باسم:
-كنوز للفنون | @kounouzarts
+كنوز للفنون | ⁦@kounouzarts⁩
 
 تواصلكم معنا مفتاح تقدّمنا،
 وخدمتكم وسام فخر لنا. 🌸`},
@@ -88,7 +89,7 @@ _تواصلكم معنا مفتاح تقدمنا،
 السعر: 1800 دج.
 متوفر توصيل لكل الولايات 🚛
 متواجدون على الفايسبوک والأنستغرام باسم:
-كنوز للفنون ، @kounouzarts
+كنوز للفنون ، ⁦@kounouzarts⁩
 _تواصلكم معنا مفتاح تقدمنا،
 خدمتكم وسام فَخر لنا.🌸`},
   {id:5, cat:"paper", name:"الورق المزخرف A5", desc:"مطبوع بتقنية الشبكة الدقيقة، مهيّأ للخط العربي والإهداءات — 14.8 × 21 سم", price:150, unit:"للورقة",
@@ -105,7 +106,7 @@ _تواصلكم معنا مفتاح تقدمنا،
 💰 السعر: 150 دج فقط.
 
 🚛 التوصيل متوفر إلى جميع ولايات الوطن.
-📱 تجدوننا على فيسبوك وإنستغرام باسم: كنوز للفنون | @kounouzarts
+📱 تجدوننا على فيسبوك وإنستغرام باسم: كنوز للفنون | ⁦@kounouzarts⁩
 حيثُ يلتقي جمالُ الورق بروعةِ الحرف. ✒️
 ثقتكم مصدر إلهامنا، وخدمتكم شرفٌ نعتز به.`},
   {id:6, cat:"pencases", name:"مقلمة جلدية فاخرة — صناعة كنوز", desc:"جلد بقر إيطالي، صناعة يدوية جزائرية، تتّسع لـ 10 أقلام", price:4800,
@@ -122,9 +123,39 @@ _تواصلكم معنا مفتاح تقدمنا،
 السعر: 4800دج
 متوفر توصيل لكل الولايات 🚛
 متواجدون على الفايسبوک والأنستغرام باسم:
-كنوز للفنون ، @kounouzarts
+كنوز للفنون ، ⁦@kounouzarts⁩
 _تواصلكم معنا مفتاح تقدمنا،
-خدمتكم وسام فَخر لنا.🌸`}
+خدمتكم وسام فَخر لنا.🌸`},
+  {id:7, cat:"misc", name:"قلم السبورة البيضاء GENVANA — رأس عريض 20 ملم", desc:"كتابة بارزة للخطاطين والمدرّسين، قابل للمسح وإعادة التعبئة", price:1200, from:true, pick:"اختر الخيارات",
+   options:[
+    {key:"color", label:"لون القلم", values:[{name:"أسود"},{name:"أزرق"},{name:"أحمر"}]},
+    {key:"ink", label:"قارورة التعبئة", values:[{name:"بدون قارورة", default:true},{name:"20 مل", price:500},{name:"36 مل", price:600},{name:"65 مل", price:800}]},
+    {key:"inkColor", label:"لون القارورة", showIf:{key:"ink", not:"بدون قارورة"}, values:[{name:"أسود"},{name:"أزرق"},{name:"أحمر"}]}
+   ],
+   img:"images/misc/genvana-marker-20mm/1.jpg",
+   images:["images/misc/genvana-marker-20mm/1.jpg","images/misc/genvana-marker-20mm/2.jpg","images/misc/genvana-marker-20mm/3.jpg","images/misc/genvana-marker-20mm/4.jpg","images/misc/genvana-marker-20mm/5.jpg","images/misc/genvana-marker-20mm/6.jpg","images/misc/genvana-marker-20mm/7.jpg","images/misc/genvana-marker-20mm/8.jpg","images/misc/genvana-marker-20mm/9.jpg","images/misc/genvana-marker-20mm/10.jpg","images/misc/genvana-marker-20mm/11.jpg"],
+   details:`🇩🇿جديد كنوز للفنون.. لأول مرة في الجزائر
+
+للكتابات العريضة والعبارات التي تحتاج إلى حضورٍ أوضح، نقدّم لكم قلم السبورة البيضاء GENVANA برأس عريض 20 ملم، ليمنحكم كتابةً بارزة تناسب الخطاطين والمدرّسين، والعروض والكتابات الكبيرة على السبورات البيضاء
+
+✍🏻 عرضٌ أكبر، وكتابةٌ أكثر بروزًا!
+
+🎨 الألوان المتوفرة: الأسود، الأزرق والأحمر
+
+💰 الأسعار:
+▪️ القلم العريض (20 ملم): 1200 دج
+▪️ قارورة التعبئة (20 مل): 500 دج
+▪️ قارورة التعبئة (36 مل): 600 دج
+▪️ قارورة التعبئة (65 مل): 800 دج
+
+♻️ قابل للمسح وإعادة التعبئة، لتجديد استخدامه والاستفادة منه مدة أطول.
+
+📦 متوفر الآن لدى كنوز للفنون، مع التوصيل إلى كلّ الولايات
+
+📩 للطلب والاستفسار، راسلونا عبر الخاص
+
+كنوز للفنون | ⁦@kounouzarts⁩
+تواصلكم معنا مفتاح تقدّمنا، وخدمتكم وسام فخر لنا`}
 ];
 
 /* ========= الولايات ========= */
@@ -149,7 +180,7 @@ const ICONS = {
 let cat = "all", query = "", cart = {};
 try { cart = JSON.parse(localStorage.getItem("kz-cart") || "{}"); } catch(e){}
 const $ = id => document.getElementById(id);
-const fmt = n => n.toLocaleString("ar-DZ-u-nu-latn") + " دج";
+const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00A0") + " دج";
 const save = () => { try { localStorage.setItem("kz-cart", JSON.stringify(cart)); } catch(e){} };
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
@@ -162,6 +193,21 @@ $("courseBtn").href = "https://wa.me/" + SHOP.whatsapp + "?text=" + encodeURICom
 WILAYAS.forEach((w,i) => { const o = document.createElement("option"); o.value = w; o.textContent = String(i+1).padStart(2,"0") + " - " + w; $("wl").appendChild(o); });
 
 /* ========= عرض المنتجات ========= */
+/* ========= خيارات المنتج (لون، حجم، قارورة...) ========= */
+const optVisible = (o, sel) => !o.showIf || (sel[o.showIf.key] && sel[o.showIf.key] !== o.showIf.not);
+function calcPrice(p, sel){
+  let t = p.price;
+  (p.options||[]).forEach(o => {
+    if (!optVisible(o, sel)) return;
+    const v = o.values.find(x => x.name === sel[o.key]);
+    if (v && v.price) t += v.price;
+  });
+  return t;
+}
+function describe(p, sel){
+  return (p.options||[]).filter(o => optVisible(o, sel) && sel[o.key]).map(o => o.label + ": " + sel[o.key]).join("، ");
+}
+
 function renderCats(){
   $("cats").innerHTML = CATS.map(c => `<button class="chip ${c.id===cat?"on":""}" data-c="${c.id}">${c.name}</button>`).join("");
 }
@@ -177,27 +223,37 @@ function renderGrid(){
       <div class="info">
         <h3>${esc(p.name)}</h3>
         <p>${esc(p.desc)}</p>
-        <div class="row"><span class="price">${fmt(p.price)}</span>${p.sizes ? `<button class="add" data-open="${p.id}">اختر الحجم</button>` : `<button class="add" data-add="${p.id}">أضف</button>`}</div>
+        <div class="row"><span class="price">${p.from ? "من " : ""}${fmt(p.price)}</span>${p.options ? `<button class="add" data-open="${p.id}">${p.pick || "اختر الخيارات"}</button>` : `<button class="add" data-add="${p.id}">أضف</button>`}</div>
       </div>
     </article>`).join("") : `<div class="empty">${query ? "لا توجد منتجات مطابقة." : "سيتم إضافة منتجات هذا القسم قريباً."}</div>`;
 }
 
 /* ========= السلة ========= */
 function cartLines(){
-  return Object.entries(cart).map(([k,q]) => { const [id,size] = k.split("|"); return {k, size, p:PRODUCTS.find(x => x.id==id), q}; }).filter(l => l.p && l.q>0);
+  const out = [];
+  Object.entries(cart).forEach(([k,q]) => {
+    const i = k.indexOf("|");
+    const id = i < 0 ? k : k.slice(0,i);
+    let sel = {};
+    if (i >= 0){ try { sel = JSON.parse(k.slice(i+1)); } catch(e){ return; } }
+    const p = PRODUCTS.find(x => x.id == id);
+    if (!p || !(q > 0)) return;
+    out.push({k, p, q, sel, unit: calcPrice(p, sel), desc: describe(p, sel)});
+  });
+  return out;
 }
-function addToCart(id, size){
-  const k = size ? id + "|" + size : String(id);
+function addToCart(id, sel){
+  const k = sel && Object.keys(sel).length ? id + "|" + JSON.stringify(sel) : String(id);
   cart[k] = (cart[k]||0) + 1; renderCart(); toast();
 }
 function renderCart(){
   const lines = cartLines();
-  const total = lines.reduce((s,l) => s + l.p.price*l.q, 0);
+  const total = lines.reduce((s,l) => s + l.unit*l.q, 0);
   $("count").textContent = lines.reduce((s,l) => s + l.q, 0);
   $("total").textContent = fmt(total);
   $("items").innerHTML = lines.length ? lines.map(l => `
     <div class="item">
-      <div class="t"><b>${esc(l.p.name)}${l.size ? " — " + esc(l.size) : ""}</b><span>${fmt(l.p.price*l.q)}</span></div>
+      <div class="t"><b>${esc(l.p.name)}</b>${l.desc ? `<em class="od">${esc(l.desc)}</em>` : ""}<span>${fmt(l.unit*l.q)}</span></div>
       <div class="qty"><button data-d="1" data-k="${l.k}">+</button><i>${l.q}</i><button data-d="-1" data-k="${l.k}">−</button></div>
       <button class="rm" data-rm="${l.k}">حذف</button>
     </div>`).join("") : `<p class="empty" style="padding:40px 0">السلة فارغة</p>`;
@@ -228,10 +284,10 @@ document.addEventListener("keydown", e => { if(e.key === "Escape") openCart(fals
 $("order").addEventListener("submit", e => {
   e.preventDefault();
   const lines = cartLines(); if(!lines.length) return;
-  const total = lines.reduce((s,l) => s + l.p.price*l.q, 0);
+  const total = lines.reduce((s,l) => s + l.unit*l.q, 0);
   const msg = [
     "السلام عليكم، أود طلب:",
-    ...lines.map(l => `• ${l.p.name}${l.size ? " (" + l.size + ")" : ""} × ${l.q} = ${fmt(l.p.price*l.q)}`),
+    ...lines.map(l => `• ${l.p.name}${l.desc ? " (" + l.desc + ")" : ""} × ${l.q} = ${fmt(l.unit*l.q)}`),
     `المجموع: ${fmt(total)} (دون التوصيل)`,
     "",
     `الاسم: ${$("nm").value}`,
@@ -259,7 +315,7 @@ function updateStatus(){
 updateStatus(); setInterval(updateStatus, 60000);
 
 /* ========= نافذة تفاصيل المنتج ========= */
-let cur = null, gi = 0, chosen = "", imgs = [];
+let cur = null, gi = 0, sel = {}, imgs = [];
 const pm = $("pm"), pmShade = $("pmShade");
 
 function showImg(i){
@@ -269,10 +325,23 @@ function showImg(i){
   $("gCount").textContent = (gi+1) + " / " + imgs.length;
   document.querySelectorAll("#pmBody .th").forEach((t,n) => t.classList.toggle("on", n===gi));
 }
+function optsHTML(){
+  return (cur.options||[]).map(o => optVisible(o, sel) ? `
+    <div class="opt" data-opt="${o.key}">
+      <b>${esc(o.label)}:</b>
+      <div class="chips">${o.values.map(v => `<button type="button" class="chip ${sel[o.key]===v.name ? "on" : ""}" data-ok="${o.key}" data-ov="${esc(v.name)}">${esc(v.name)}${v.price ? ` <small>+${fmt(v.price)}</small>` : ""}</button>`).join("")}</div>
+    </div>` : "").join("") + `<p class="hint" id="hint" hidden></p>`;
+}
+function refreshOpts(){
+  (cur.options||[]).forEach(o => { if (!optVisible(o, sel)) delete sel[o.key]; });
+  $("opts").innerHTML = optsHTML();
+  $("pmPrice").innerHTML = fmt(calcPrice(cur, sel)) + (cur.unit ? ` <small>${esc(cur.unit)}</small>` : "");
+}
 function openProduct(id){
   cur = PRODUCTS.find(p => p.id == id); if(!cur) return;
   imgs = (cur.images && cur.images.length) ? cur.images : (cur.img ? [cur.img] : []);
-  gi = 0; chosen = "";
+  gi = 0; sel = {};
+  (cur.options||[]).forEach(o => { const d = o.values.find(v => v.default); if (d) sel[o.key] = d.name; });
   const catName = (CATS.find(c => c.id===cur.cat)||{}).name;
   const gallery = imgs.length ? `
     <div class="gal">
@@ -287,11 +356,12 @@ function openProduct(id){
     <div class="pd">
       <span class="kicker">${catName||""}</span>
       <h3>${esc(cur.name)}</h3>
-      <div class="pprice">${fmt(cur.price)}${cur.unit ? ` <small>${esc(cur.unit)}</small>` : ""}</div>
-      ${cur.sizes ? `<div class="sizes"><b>اختر الحجم:</b><div class="chips" id="sizes">${cur.sizes.map(s => `<button type="button" class="chip" data-size="${esc(s)}">${esc(s)}</button>`).join("")}</div><p class="hint" id="hint" hidden>الرجاء اختيار الحجم أولاً</p></div>` : ""}
+      <div class="pprice" id="pmPrice"></div>
+      <div id="opts"></div>
       <div class="pdesc">${esc(cur.details || cur.desc)}</div>
       <button class="btn solid padd" id="pmAdd" type="button">أضف إلى السلة</button>
     </div>`;
+  refreshOpts();
   pm.classList.add("open"); pmShade.classList.add("open"); document.body.style.overflow = "hidden";
   pm.scrollTop = 0;
   showImg(0);
@@ -302,15 +372,20 @@ function closeProduct(){
 $("pmBody").addEventListener("click", e => {
   const g = e.target.closest("[data-g]"); if(g){ showImg(gi + Number(g.dataset.g)); return; }
   const t = e.target.closest("[data-gi]"); if(t){ showImg(Number(t.dataset.gi)); return; }
-  const s = e.target.closest("[data-size]");
-  if (s){
-    chosen = s.dataset.size;
-    document.querySelectorAll("#sizes .chip").forEach(c => c.classList.toggle("on", c===s));
-    $("hint").hidden = true; return;
-  }
+  const s = e.target.closest("[data-ok]");
+  if (s){ sel[s.dataset.ok] = s.dataset.ov; refreshOpts(); return; }
   if (e.target.closest("#pmAdd")){
-    if (cur.sizes && !chosen){ $("hint").hidden = false; $("sizes").classList.add("shake"); setTimeout(() => $("sizes").classList.remove("shake"), 500); return; }
-    addToCart(cur.id, chosen); closeProduct();
+    const missing = (cur.options||[]).find(o => optVisible(o, sel) && !sel[o.key]);
+    if (missing){
+      const h = $("hint"); h.textContent = "الرجاء اختيار: " + missing.label; h.hidden = false;
+      const el = document.querySelector('[data-opt="' + missing.key + '"]');
+      el.classList.add("shake"); setTimeout(() => el.classList.remove("shake"), 500);
+      el.scrollIntoView({block:"center", behavior:"smooth"});
+      return;
+    }
+    const out = {};
+    (cur.options||[]).forEach(o => { if (optVisible(o, sel)) out[o.key] = sel[o.key]; });
+    addToCart(cur.id, out); closeProduct();
   }
 });
 let tx = null;
